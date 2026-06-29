@@ -1,0 +1,10 @@
+# robots.txt — Ronanto Interactive
+# https://ronanto.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Exclude the 404 error page from crawling
+Disallow: /404.html
+
+Sitemap: https://ronanto.com/sitemap.xml
