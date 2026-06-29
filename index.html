@@ -141,29 +141,48 @@
          ─────────────────────────────────────────────────────── -->
     <section id="hero" aria-labelledby="hero-heading">
       <div class="container">
+        <div class="hero__grid">
 
-        <!-- Studio label (Space Mono) -->
-        <span class="hero__label t-mono" aria-label="Independent Game Studio">
-          Independent Game Studio
-        </span>
+          <!-- Left: text content -->
+          <div class="hero__text">
+            <!-- Studio label (Space Mono) -->
+            <span class="hero__label t-mono" aria-label="Independent Game Studio">
+              Independent Game Studio
+            </span>
 
-        <!-- Studio name — single H1 per page -->
-        <h1 class="hero__title t-display" id="hero-heading">
-          Ronanto Interactive.
-        </h1>
+            <!-- Studio name — single H1 per page -->
+            <h1 class="hero__title t-display" id="hero-heading">
+              Ronanto Interactive.
+            </h1>
 
-        <!-- Tagline -->
-        <p class="hero__tagline t-body">
-          Crafting memorable interactive experiences.
-        </p>
+            <!-- Tagline -->
+            <p class="hero__tagline t-body">
+              Crafting memorable interactive experiences.
+            </p>
+          </div>
 
+          <!-- Right: large logo -->
+          <div class="hero__logo-wrap" aria-hidden="true">
+            <img
+              src="images/logo/ronanto-logo.png"
+              alt=""
+              class="hero__logo-img"
+              width="1536"
+              height="1024"
+              loading="eager"
+              decoding="async"
+              draggable="false"
+            />
+          </div>
+
+        </div>
       </div>
     </section>
 
 
     <!-- ───────────────────────────────────────────────────────
          SECTION 2 · ABOUT PREVIEW
-         Who we are · What we believe · What we're building.
+         About the studio · Values · What's being built.
          No games mentioned.
          ─────────────────────────────────────────────────────── -->
     <section id="about" class="section" aria-labelledby="about-heading">
@@ -174,16 +193,16 @@
           <div class="about__text">
             <span class="label reveal">About the Studio</span>
             <h2 class="t-h2 reveal reveal--d1" id="about-heading">
-              We started Ronanto because we care about games.
+              Ronanto Interactive exists because games deserve more care.
             </h2>
             <p class="t-body reveal reveal--d2">
-              Ronanto Interactive is a small independent game studio.
-              We started it because we love what games can be — not just
-              entertainment, but something that stays with you.
+              Ronanto Interactive is an independent game studio founded
+              on a belief that games can be more than entertainment —
+              they can be something that genuinely stays with you.
             </p>
             <p class="t-body reveal reveal--d3">
-              We're early. We're learning. And we're building something
-              we'd genuinely want to play ourselves.
+              Still early. Still learning. Building something worth
+              the time it takes to get right.
             </p>
           </div>
 
@@ -191,29 +210,30 @@
           <div class="about__facts" aria-label="Studio values">
 
             <div class="fact reveal reveal--d1">
-              <span class="label">Who we are</span>
+              <span class="label">The studio</span>
               <h3 class="fact__title">Fully independent</h3>
               <p class="fact__body">
-                No publisher. No outside pressure. Just a small team
-                making the games we believe in, on our own terms.
+                No publisher. No outside pressure. Built on creative
+                freedom and a commitment to making games that matter.
               </p>
             </div>
 
             <div class="fact reveal reveal--d2">
-              <span class="label">What we believe</span>
+              <span class="label">The approach</span>
               <h3 class="fact__title">Less, but better</h3>
               <p class="fact__body">
-                We'd rather spend more time on fewer things than rush
-                something out. The details matter. They always show.
+                More time on fewer things. Never rushing something out
+                the door before it's ready. The details matter — they
+                always show.
               </p>
             </div>
 
             <div class="fact reveal reveal--d3">
-              <span class="label">What we're building</span>
+              <span class="label">In development</span>
               <h3 class="fact__title">Something worth your time</h3>
               <p class="fact__body">
-                We're not ready to talk about specifics yet. When we are,
-                you'll hear it here first.
+                Not ready to talk about specifics yet. When the time
+                comes, you'll hear it here first.
               </p>
             </div>
 
@@ -279,7 +299,7 @@
           <!-- Plain text — intentionally not a mailto link -->
           <p class="contact__email-text">hello@ronanto.com</p>
           <p class="contact__note t-small">
-            We look forward to hearing from you.
+            Always happy to hear from you.
           </p>
         </div>
 
@@ -317,13 +337,12 @@
         <!-- Footer navigation -->
         <nav class="footer__nav" aria-label="Footer navigation">
           <a href="#hero">Home</a>
-          <a href="#about">About</a>
-          <a href="#news">News</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
           <!--
             FUTURE: insert <a href="games.html">Games</a> here
             when the Games page is ready.
           -->
-          <a href="#contact">Contact</a>
         </nav>
 
       </div>

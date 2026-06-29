@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ─── Primary SEO ─────────────────────────────────────── -->
+  <title>Page Not Found — Ronanto Interactive</title>
+  <meta name="description" content="The page you're looking for doesn't exist or may have moved." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="author" content="Ronanto Interactive" />
+
+  <!-- Browser theme color -->
+  <meta name="theme-color" content="#F9F8F6" />
+
+  <!-- ─── Favicon ────────────────────────────────────────── -->
+  <link rel="icon" type="image/png" href="images/logo/ronanto-logo.png" />
+
+  <!-- ─── Fonts ───────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ─── Stylesheet ──────────────────────────────────────── -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════ -->
+  <header id="site-header" role="banner">
+    <div class="container nav__inner">
+
+      <a href="index.html" class="nav__logo" aria-label="Ronanto Interactive — go to homepage">
+        <img
+          src="images/logo/ronanto-logo.png"
+          alt="Ronanto Interactive logo"
+          class="nav__logo-img"
+          width="1536"
+          height="1024"
+          loading="eager"
+          decoding="async"
+          draggable="false"
+        />
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav aria-label="Primary navigation">
+        <ul class="nav__links" role="list">
+          <li><a href="index.html#hero"    class="nav__link" data-section="hero">Home</a></li>
+          <li><a href="index.html#about"   class="nav__link" data-section="about">About</a></li>
+          <li><a href="index.html#news"    class="nav__link" data-section="news">News</a></li>
+          <li><a href="index.html#contact" class="nav__link" data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button
+        id="hamburger"
+        class="nav__hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile menu drawer -->
+  <div
+    id="mobile-menu"
+    role="dialog"
+    aria-label="Navigation menu"
+    aria-hidden="true"
+  >
+    <a href="index.html#hero"    class="nav__link">Home</a>
+    <a href="index.html#about"   class="nav__link">About</a>
+    <a href="index.html#news"    class="nav__link">News</a>
+    <a href="index.html#contact" class="nav__link">Contact</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+       ═══════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ───────────────────────────────────────────────────────
+         404 BODY
+         Full-viewport centered. No hero ring decoration — clean.
+         ─────────────────────────────────────────────────────── -->
+    <section
+      id="not-found"
+      class="error-page"
+      aria-labelledby="error-heading"
+    >
+      <div class="container error-page__inner">
+
+        <span class="error-page__code t-mono" aria-hidden="true">404</span>
+
+        <h1 class="error-page__title t-display" id="error-heading">
+          Page Not Found
+        </h1>
+
+        <p class="t-body error-page__body">
+          The page you're looking for doesn't exist or may have moved.
+        </p>
+
+        <a
+          href="index.html"
+          class="btn btn--primary error-page__cta"
+          id="return-home-btn"
+        >
+          Return Home
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
+  <footer id="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__top">
+
+        <div class="footer__brand">
+          <a href="index.html" aria-label="Ronanto Interactive — go to homepage">
+            <img
+              src="images/logo/ronanto-logo-white.png"
+              alt="Ronanto Interactive logo"
+              class="footer__logo-img"
+              width="1536"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+              draggable="false"
+            />
+          </a>
+        </div>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </nav>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          &copy; <span id="footer-year"></span> Ronanto Interactive.
+          All rights reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCRIPTS
+       ═══════════════════════════════════════════════════════ -->
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

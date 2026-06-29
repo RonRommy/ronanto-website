@@ -91,7 +91,7 @@
   --t-slow: 0.4s;
 
   /* — Layout — */
-  --nav-h: 68px;
+  --nav-h: 76px;
   --max-w: 1100px;
 }
 
@@ -372,7 +372,7 @@ button {
 
 /* Official logo image — sized by height, aspect ratio preserved */
 .nav__logo-img {
-  height: 40px;          /* fits comfortably inside the 68px nav */
+  height: 48px;          /* slightly larger for more visual presence */
   width: auto;           /* preserves native aspect ratio */
   display: block;
   max-width: 100%;       /* scales down from native resolution */
@@ -506,7 +506,7 @@ button {
 
 /* ────────────────────────────────────────────────────────────
    5e. Hero
-   ~60 vh, CSS-only background, typography-first.
+   Two-column: text left, logo right.
    ──────────────────────────────────────────────────────────── */
 #hero {
   min-height: 60vh;
@@ -545,6 +545,18 @@ button {
   transform: translate(0, 0);
 }
 
+/* Two-column grid: text | logo */
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--s-16);
+}
+
+.hero__text {
+  min-width: 0; /* prevent text overflow blowing out the grid */
+}
+
 .hero__label {
   margin-bottom: var(--s-5);
 }
@@ -557,6 +569,26 @@ button {
   max-width: 480px;
   /* No margin-bottom needed — no button below */
 }
+
+/* Large hero logo — right column */
+.hero__logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.hero__logo-img {
+  width: clamp(200px, 28vw, 380px);
+  height: auto;
+  display: block;
+  /* Soft entrance — slightly longer than text so it settles last */
+  animation: fadeUp 0.7s var(--ease-out) 0.4s both;
+  /* Subtle drop shadow so it lifts off the bg */
+  filter: drop-shadow(0 8px 32px rgba(91, 79, 255, 0.08))
+          drop-shadow(0 2px 8px rgba(0, 0, 0, 0.06));
+}
+
 
 /* ────────────────────────────────────────────────────────────
    5f. About Preview
@@ -820,6 +852,174 @@ button {
 .hero__tagline { animation: fadeUp 0.6s  var(--ease-out) 0.3s  both; }
 
 
+/* ────────────────────────────────────────────────────────────
+   5j. Legal Pages (Privacy Policy, Terms of Service)
+   Shared header + body layout for /privacy.html, /terms.html
+   ──────────────────────────────────────────────────────────── */
+
+/* Page header — similar atmosphere to the hero but shorter */
+.legal-header {
+  padding-top: calc(var(--nav-h) + var(--s-16));
+  padding-bottom: var(--s-12);
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle decorative ring — mirrors the hero aesthetic */
+.legal-header::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -120px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow:
+    0 0 0 1.5px rgba(91, 79, 255, 0.07),
+    0 0 0 60px rgba(91, 79, 255, 0.025),
+    0 0 0 110px rgba(91, 79, 255, 0.012);
+  pointer-events: none;
+}
+
+.legal-header .t-display {
+  font-size: clamp(2.2rem, 4.5vw, 3.75rem);
+  margin-bottom: var(--s-4);
+}
+
+.legal-header__meta {
+  font-size: 0.9375rem;
+  color: var(--text-3);
+  margin-top: var(--s-2);
+}
+
+/* Body section — white card look on the off-white page */
+.legal-body {
+  padding-top: 0;
+}
+
+/* Prose container — narrowed for comfortable reading */
+.legal-content {
+  max-width: 720px;
+}
+
+/* Intro paragraph */
+.legal-content > .t-body:first-child {
+  margin-bottom: var(--s-10);
+  padding-bottom: var(--s-10);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Body paragraphs */
+.legal-content .t-body {
+  margin-bottom: var(--s-4);
+}
+
+/* Section headings */
+.legal-content__heading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-1);
+  letter-spacing: -0.01em;
+  margin-top: var(--s-10);
+  margin-bottom: var(--s-3);
+}
+
+/* Bullet lists within legal content */
+.legal-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: var(--s-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.legal-list li {
+  position: relative;
+  font-size: 1.0625rem;
+  line-height: 1.78;
+  color: var(--text-2);
+  padding-left: var(--s-5);
+}
+
+/* Custom bullet — small accent dot */
+.legal-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.5;
+}
+
+/* ────────────────────────────────────────────────────────────
+   5k. 404 Error Page
+   Centered, full-viewport-height layout.
+   ──────────────────────────────────────────────────────────── */
+.error-page {
+  min-height: calc(100vh - var(--nav-h) - 220px); /* leave room for footer */
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--nav-h) + var(--s-16));
+  padding-bottom: var(--s-20);
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Same subtle ring decoration as hero */
+.error-page::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -140px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow:
+    0 0 0 1.5px rgba(91, 79, 255, 0.07),
+    0 0 0 60px rgba(91, 79, 255, 0.025),
+    0 0 0 120px rgba(91, 79, 255, 0.015);
+  pointer-events: none;
+}
+
+.error-page__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s-4);
+}
+
+/* Large muted "404" code */
+.error-page__code {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--s-2);
+}
+
+.error-page__title {
+  margin-bottom: var(--s-2);
+}
+
+.error-page__body {
+  max-width: 400px;
+  margin-bottom: var(--s-4);
+}
+
+.error-page__cta {
+  margin-top: var(--s-2);
+}
+
+
 /* ============================================================
    7. RESPONSIVE
    ============================================================ */
@@ -836,6 +1036,15 @@ button {
   .about__facts {
     padding-top: 0;
   }
+
+  /* Collapse hero to single column, hide logo */
+  .hero__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__logo-wrap {
+    display: none;
+  }
 }
 
 /* — Mobile ≤ 768 px — */
@@ -845,7 +1054,7 @@ button {
   }
 
   .nav__logo-img {
-    height: 34px;        /* scaled down for mobile nav height */
+    height: 40px;        /* scaled down for mobile nav height */
   }
 
   /* Show hamburger, hide desktop links */
