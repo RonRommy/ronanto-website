@@ -1037,13 +1037,19 @@ button {
     padding-top: 0;
   }
 
-  /* Collapse hero to single column, hide logo */
+  /* Collapse hero to single column, logo stacks below text */
   .hero__grid {
     grid-template-columns: 1fr;
+    gap: var(--s-10);
   }
 
   .hero__logo-wrap {
-    display: none;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .hero__logo-img {
+    width: clamp(160px, 50vw, 280px);
   }
 }
 
