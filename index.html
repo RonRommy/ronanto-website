@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ─── Primary SEO ─────────────────────────────────────── -->
+  <title>Ronanto Interactive — Independent Game Studio</title>
+  <meta
+    name="description"
+    content="Ronanto Interactive is an independent game studio crafting memorable interactive experiences. Built with intention, craft, and care."
+  />
+  <meta name="robots"  content="index, follow" />
+  <meta name="author"  content="Ronanto Interactive" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://ronanto.com/" />
+
+  <!-- Browser theme color (mobile address bar) -->
+  <meta name="theme-color" content="#F9F8F6" />
+
+  <!-- ─── Open Graph ──────────────────────────────────────── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://ronanto.com/" />
+  <meta property="og:site_name"   content="Ronanto Interactive" />
+  <meta property="og:title"       content="Ronanto Interactive — Independent Game Studio" />
+  <meta property="og:description" content="Crafting memorable interactive experiences. Built with intention, craft, and care." />
+
+  <!-- ─── Twitter / X Card ───────────────────────────────── -->
+  <meta name="twitter:card"        content="summary" />
+  <meta name="twitter:site"        content="@ronantogames" />
+  <meta name="twitter:title"       content="Ronanto Interactive" />
+  <meta name="twitter:description" content="An independent game studio crafting memorable interactive experiences." />
+
+  <!-- ─── Favicon (pointing to official PNG logo) ─────────── -->
+  <link rel="icon" type="image/png" href="images/logo/ronanto-logo.png" />
+
+  <!-- ─── Fonts ───────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ─── Stylesheet ──────────────────────────────────────── -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+       Fixed top bar. Transparent over hero, white on scroll.
+       ═══════════════════════════════════════════════════════ -->
+  <header id="site-header" role="banner">
+    <div class="container nav__inner">
+
+      <a href="#hero" class="nav__logo" aria-label="Ronanto Interactive — go to top">
+        <img
+          src="images/logo/ronanto-logo.png"
+          alt="Ronanto Interactive logo"
+          class="nav__logo-img"
+          width="1536"
+          height="1024"
+          loading="eager"
+          decoding="async"
+          draggable="false"
+        />
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav aria-label="Primary navigation">
+        <ul class="nav__links" role="list">
+          <li>
+            <a href="#hero"    class="nav__link is-active" data-section="hero">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about"   class="nav__link"           data-section="about">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#news"    class="nav__link"           data-section="news">
+              News
+            </a>
+          </li>
+          <!--
+            FUTURE PAGE SLOT: insert <li><a href="games.html" …>Games</a></li>
+            between News and Contact without changing anything else.
+          -->
+          <li>
+            <a href="#contact" class="nav__link"           data-section="contact">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button
+        id="hamburger"
+        class="nav__hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile menu drawer -->
+  <div
+    id="mobile-menu"
+    role="dialog"
+    aria-label="Navigation menu"
+    aria-hidden="true"
+  >
+    <a href="#hero"    class="nav__link" data-section="hero">Home</a>
+    <a href="#about"   class="nav__link" data-section="about">About</a>
+    <a href="#news"    class="nav__link" data-section="news">News</a>
+    <a href="#contact" class="nav__link" data-section="contact">Contact</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+       ═══════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ───────────────────────────────────────────────────────
+         SECTION 1 · HERO
+         ~60 vh. Typography-first. One primary CTA.
+         ─────────────────────────────────────────────────────── -->
+    <section id="hero" aria-labelledby="hero-heading">
+      <div class="container">
+
+        <!-- Studio label (Space Mono) -->
+        <span class="hero__label t-mono" aria-label="Independent Game Studio">
+          Independent Game Studio
+        </span>
+
+        <!-- Studio name — single H1 per page -->
+        <h1 class="hero__title t-display" id="hero-heading">
+          Ronanto Interactive.
+        </h1>
+
+        <!-- Tagline -->
+        <p class="hero__tagline t-body">
+          Crafting memorable interactive experiences.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ───────────────────────────────────────────────────────
+         SECTION 2 · ABOUT PREVIEW
+         Who we are · What we believe · What we're building.
+         No games mentioned.
+         ─────────────────────────────────────────────────────── -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about__grid">
+
+          <!-- Left: intro text -->
+          <div class="about__text">
+            <span class="label reveal">About the Studio</span>
+            <h2 class="t-h2 reveal reveal--d1" id="about-heading">
+              We started Ronanto because we care about games.
+            </h2>
+            <p class="t-body reveal reveal--d2">
+              Ronanto Interactive is a small independent game studio.
+              We started it because we love what games can be — not just
+              entertainment, but something that stays with you.
+            </p>
+            <p class="t-body reveal reveal--d3">
+              We're early. We're learning. And we're building something
+              we'd genuinely want to play ourselves.
+            </p>
+          </div>
+
+          <!-- Right: three facts -->
+          <div class="about__facts" aria-label="Studio values">
+
+            <div class="fact reveal reveal--d1">
+              <span class="label">Who we are</span>
+              <h3 class="fact__title">Fully independent</h3>
+              <p class="fact__body">
+                No publisher. No outside pressure. Just a small team
+                making the games we believe in, on our own terms.
+              </p>
+            </div>
+
+            <div class="fact reveal reveal--d2">
+              <span class="label">What we believe</span>
+              <h3 class="fact__title">Less, but better</h3>
+              <p class="fact__body">
+                We'd rather spend more time on fewer things than rush
+                something out. The details matter. They always show.
+              </p>
+            </div>
+
+            <div class="fact reveal reveal--d3">
+              <span class="label">What we're building</span>
+              <h3 class="fact__title">Something worth your time</h3>
+              <p class="fact__body">
+                We're not ready to talk about specifics yet. When we are,
+                you'll hear it here first.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ───────────────────────────────────────────────────────
+         SECTION 3 · LATEST NEWS
+         Single real update. Intentionally minimal.
+         ─────────────────────────────────────────────────────── -->
+    <section id="news" class="section section--alt" aria-labelledby="news-heading">
+      <div class="container">
+
+        <div class="section-intro reveal">
+          <span class="label">Latest</span>
+          <h2 class="t-h2 section-intro__title" id="news-heading">News</h2>
+        </div>
+
+        <!-- Single update card -->
+        <article
+          class="news-card reveal reveal--d1"
+          aria-labelledby="news-item-1-title"
+        >
+          <div class="news-card__meta">
+            <time class="news-card__date" datetime="2026-06">Jun 2026</time>
+            <span class="news-card__tag">Studio</span>
+          </div>
+          <h3 class="news-card__title" id="news-item-1-title">
+            Website launched.
+          </h3>
+          <p class="news-card__body">
+            More updates coming soon.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- ───────────────────────────────────────────────────────
+         SECTION 4 · CONTACT
+         Centered. Simple. One button.
+         ─────────────────────────────────────────────────────── -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <div class="section-intro section-intro--center reveal">
+          <span class="label">Get in Touch</span>
+          <h2 class="t-h2 section-intro__title" id="contact-heading">
+            Get in Touch
+          </h2>
+          <p class="t-body section-intro__body">
+            Have a question, business inquiry, or simply want to say hello?
+            Feel free to reach out using the email below.
+          </p>
+        </div>
+
+        <div class="contact__body reveal reveal--d1">
+          <!-- Plain text — intentionally not a mailto link -->
+          <p class="contact__email-text">hello@ronanto.com</p>
+          <p class="contact__note t-small">
+            We look forward to hearing from you.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       Dark. Studio name, tagline, nav links, copyright.
+       ═══════════════════════════════════════════════════════ -->
+  <footer id="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__top">
+
+        <!-- Official Ronanto Interactive logo -->
+        <div class="footer__brand">
+          <a href="#hero" aria-label="Ronanto Interactive — go to top">
+            <img
+              src="images/logo/ronanto-logo-white.png"
+              alt="Ronanto Interactive logo"
+              class="footer__logo-img"
+              width="1536"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+              draggable="false"
+            />
+          </a>
+        </div>
+
+        <!-- Footer navigation -->
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#news">News</a>
+          <!--
+            FUTURE: insert <a href="games.html">Games</a> here
+            when the Games page is ready.
+          -->
+          <a href="#contact">Contact</a>
+        </nav>
+
+      </div>
+
+      <!-- Bottom row: copyright -->
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          &copy; <span id="footer-year"></span> Ronanto Interactive.
+          All rights reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCRIPTS
+       ═══════════════════════════════════════════════════════ -->
+  <script src="js/main.js"></script>
+
+  <!-- Inline: set copyright year dynamically -->
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
