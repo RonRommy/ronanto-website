@@ -182,12 +182,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = `${user}@${domain}`;
       if (el.tagName === 'A') {
         el.setAttribute('href', `mailto:${email}`);
-        if (!el.textContent.trim() || el.textContent.includes('[at]')) {
-          el.textContent = email;
-        }
-      } else {
-        el.textContent = email;
       }
+      el.textContent = email;
     }
   });
 
