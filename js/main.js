@@ -170,4 +170,25 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => observer.observe(el));
   }
 
+  /* ──────────────────────────────────────────────────────────
+     6. EMAIL OBFUSCATION
+     Rebuilds email links from data attributes to protect
+     them from simple web-scraping spam bots.
+     ────────────────────────────────────────────────────────── */
+  document.querySelectorAll('.obfuscated-email').forEach(el => {
+    const user   = el.getAttribute('data-user');
+    const domain = el.getAttribute('data-domain');
+    if (user && domain) {
+      const email = `${user}@${domain}`;
+      if (el.tagName === 'A') {
+        el.setAttribute('href', `mailto:${email}`);
+        if (!el.textContent.trim() || el.textContent.includes('[at]')) {
+          el.textContent = email;
+        }
+      } else {
+        el.textContent = email;
+      }
+    }
+  });
+
 }); // end DOMContentLoaded
