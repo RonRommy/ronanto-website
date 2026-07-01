@@ -629,7 +629,7 @@ summary:focus-visible {
 }
 
 .hero__logo-img {
-  width: clamp(140px, 18vw, 220px);
+  width: clamp(100px, 12vw, 160px);
   height: auto;
   display: block;
   /* Soft entrance — slightly longer than text so it settles last */
@@ -1099,7 +1099,7 @@ summary:focus-visible {
   }
 
   .hero__logo-img {
-    width: clamp(100px, 30vw, 150px);
+    width: clamp(80px, 20vw, 110px);
   }
 }
 
